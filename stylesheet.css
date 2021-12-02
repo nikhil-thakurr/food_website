@@ -1,0 +1,528 @@
+@font-face {
+    font-family: "Raleway-Regular";
+    src: url(./fonts/Raleway-Regular.ttf );
+}
+@font-face {
+    font-family: "Raleway-Medium";
+    src: url(./fonts/Raleway-Medium.ttf );
+}
+@font-face {
+    font-family: "Raleway-SemiBold";
+    src: url(./fonts/Raleway-SemiBold.ttf );
+}
+@font-face {
+    font-family: "Raleway-Bold";
+    src: url(./fonts/Raleway-Bold.ttf );
+}
+@font-face {
+    font-family: "Raleway-Black";
+    src: url(./fonts/Raleway-Black.ttf );
+}
+
+:root{
+    --primary:#EEBF00;
+    --secondary:#232B38;
+    --ternary:#6C6C6C;
+    --danger:#FE4545;
+    --pure:#FEFEFE;
+    --light:#F0F0F0;
+    --heaven:#FFFFFF;
+    --footer:#2D333F;
+}
+body{
+    -webkit-font-smoothing:antiliased;
+    height: 5000px;
+    font-family: "Raleway-Regular";
+}
+.container{
+    width:100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+@media (min-width:576px){
+    .container{
+        max-width: 540px;;
+    }
+}
+@media (min-width:768px){
+    .container{
+        max-width: 720px;;
+    }
+}
+@media (min-width:992px){
+    .container{
+        max-width: 960px;;
+    }
+}
+@media (min-width:1200px){
+    .container{
+        max-width: 1152px;;
+    }
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header.topbar{
+    background-color: var(--secondary);
+    color: var(--pure);
+    font-family: "Raleway-SemiBold";
+    padding: 0.75rem 0;
+}
+header.topbar .icons a{
+    margin-right: 00.75rem;
+}
+header.topbar .divider {
+    padding: 0 1rem;
+}
+header.topbar .auth > div a{
+    color:var(--pure);
+    text-decoration: none;
+}
+/* header.topbar .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header.topbar .container .auth{
+    display: flex;
+} */
+.flex{
+    display: flex;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.items-center{
+    align-items: center;
+}
+nav .top .contact h5,nav .top .time h5{
+   font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 0.25rem;  
+}
+.justify-center{
+    justify-content: center;
+}
+nav .top{
+    padding: 1.5rem 0;
+}
+nav .top .contact h6,nav .top .time h6{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 0.06rem;
+    color: var(--ternary);
+}
+nav .top .contact img{
+    margin-right: 1rem;
+}
+nav .top .time img{
+margin-right: 1rem;
+}
+nav .navbar a{
+    font-family:"Raleway-semibold";
+    color: var(--secondary);
+    padding: 1rem 1.5rem;
+    text-decoration:none;
+    transition: all 0.3s ease;
+}
+nav .navbar a.active{
+    background-color: var(--primary);
+    color: var(--pure);
+    
+}
+nav .navbar a:hover{
+    background-color: var(--primary);
+    color: var(--pure);
+
+}
+.magic-shadow{
+    position: relative;
+    background-color: var(--heaven);
+}
+.magic-shadow:after{
+   
+    display: block;
+    content: '';
+    height: 69px;
+    width: 100%;
+    background-image: url(./icons/shadow.svg);
+    bottom: -20px;
+    background-position: center;
+    position: absolute;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+header.hero{
+    height: 500px;
+    background-image: url('./images/hero.png');
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+}
+header.hero .welcome span{
+    font-family:"Raleway-Bold";
+    color: var(--secondary);
+    margin-right: 00.75rem;
+}
+header.hero .welcome{
+    margin-bottom: 0.25rem;
+}
+header.hero h1{
+    font-family: "Raleway-SemiBold";
+    color: var(--secondary);
+   
+}
+header.hero h1 span{
+    color: var(--primary);
+}
+header.hero p{
+    width: 50%;
+    font-size: "Raleway-Medium";
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+.btn{
+    padding: 0.50rem 0.75rem;
+    border-radius: 4px;
+    border: none;
+    line-height: 1;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.btn-primary{
+    background-color: var(--primary);
+    color: var(--heaven);
+}
+.btn-primary:hover{
+    background-color: var(--heaven);
+    color: var(--primary);
+}
+.btn-sec{
+    background-color: var(--secondary);
+    color: var(--heaven);
+}
+.btn-sec:hover{
+    background-color: var(--heaven);
+    color: var(--secondary);
+}
+header.hero button :first-child{
+    margin-right: 1rem;
+}
+header.hero .container{
+    position: relative;
+}
+header.hero .hero-image{
+    position: absolute;
+    /* top: 20px; */
+    right: 350px;
+}
+
+section{
+    padding: 4rem 0;
+}
+section.top-products{
+    background-color: var(--light);
+}
+
+.section-heading{
+    font-family: "Raleway-Bold";
+    text-align: center;
+    position: relative;
+    margin-bottom: 6rem;
+}
+.section-heading::after{
+    width: 100%;
+    height: 30px;
+    content: '';
+    display: block;
+    background-image: url('./icons/hr.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom: -40px;
+}
+section.top-products .food-slider .food-card{
+    background-color: var(--heaven);
+    padding: 1.5rem 0;
+    border-radius: 4px;
+}
+section.top-products .food-slider .food-card .product-image img{
+    width: 80%;
+    height: 200px;
+    object-fit: contain;
+    padding-bottom: 1rem;
+}
+hr{
+    border: 1px solid var(--light);
+    opacity: 0.8;
+    margin: 1rem 0;
+}
+section.top-products .food-slider .food-card h2{
+    font-family: "Raleway-Bold";
+    font-size: 1.3rem;
+    margin-bottom: 0.25rem;
+}
+.text-center{
+    text-align: center;
+}section.top-products .food-slider .food-card .stars{
+    margin-bottom: 0.25rem;
+} 
+
+section.top-products .food-slider .food-card .stars img{
+    margin-right: 0.3rem;
+}
+section.top-products .food-slider .food-card .price{
+    color: var(--danger);
+    font-family: "Raleway-Medium";
+    margin-bottom: 1rem;
+}
+section.top-products .food-slider .food-card button{
+    font-family: "Raleway-Medium";
+    color: var(--secondary);
+    background-color: var(--heaven);
+    border: 2px solid var(--primary);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+section.top-products .food-slider .food-card button:hover{
+    background-color: var(--primary);
+}
+.food-slider .food-card button img{
+    background-color: var(--primary);
+    padding:0.50rem ;
+    height: 32px;
+    margin-right: 1.2rem;
+}
+.slick-slide{
+    margin: 0 27px;
+}
+.slick-list{
+    margin: 0  -27px;
+}
+.top-products .slider-btn{
+    width: 30px;
+    height: 30px;
+    border:none;
+    background-color: var(--primary);
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+}
+.prev-btn{
+    position: absolute;
+    top: 46%;
+    z-index: 1;
+    left: -2rem;
+
+}
+.next-btn{
+    position: absolute;
+    top: 46%;
+    z-index: 1;
+    right: -2rem;
+
+}
+.top-products .slider{
+    position: relative;
+}
+section.about-meal img{
+    width: 80%;
+}
+.flex1{
+    flex: 1;
+}
+section.about-meal h2{
+    font-family: "Raleway-Bold";
+    color: var(--secondary);
+    margin-bottom: 2rem;
+    line-height: 1.3;
+}
+section.about-meal p{
+    line-height: 1.7;
+
+}
+section.our-services{
+    background-color: var(--light);
+}
+section.our-services .card-wrapper{
+    margin-right: -2rem;
+    margin-top: 8rem;
+}
+section.our-services .service-card{
+    background: var(--heaven);
+    padding: 2rem;
+    text-align: center;
+    padding-top: 4rem;
+    position: relative;
+    border-radius: 4px;
+    margin-right: 2rem;
+
+}
+section.our-services .service-card h2{
+    margin-bottom: 1.2rem;
+}
+section.our-services .service-card .icon{
+    position: absolute;
+    top: -45px;
+    left: 35%;
+    /* transform: translateX(-50%); */
+}
+
+.text-primary{
+    color: var(--primary);
+}
+section.big-deal{
+    background-image: linear-gradient(
+        rgba(35,43,56,0.9),
+        rgba(35,43,56,0.9)
+    ),url(./images/food-table.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+section.big-deal .timer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: -2rem;
+}
+section.big-deal .timer div{
+    margin-right: 2rem;
+    background: var(--primary);
+    height: 150px;
+    width: 150px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+section.big-deal .timer div span:first-child{
+    font-family: "Raleway-SemiBold";
+    font-size: 2rem;
+    margin-bottom: 0.05rem;
+    color: var(--heaven);
+}
+.text-pure{
+    color: var(--pure);
+}
+section.subscribe{
+    background-color: var(--primary);
+}
+section.subscribe .container > div:first-child img{
+    width: 90%;
+}
+section.subscribe .container div:first-child{
+    flex: 1;
+}
+section.subscribe .container div:last-child{
+    flex: 1;
+}
+section.subscribe h1{
+    font-family: "Raleway-Bold";
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+}
+section.subscribe p{
+    font-family: "Raleway-Medium";
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+section.subscribe .input-wrap{
+    background: var(--heaven);
+    padding: 01rem;
+    border-radius: 4px;
+    display: flex;
+}
+section.subscribe .input-wrap input{
+    border: none;
+    width: 100%;
+    font-size: 1rem;
+}
+section.subscribe .input-wrap button{
+    border: none;
+    padding: 0.8rem 2rem;
+    background-color: var(--primary);
+    color: var(--pure);
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 4px;
+}
+
+section.contact-us .contact-info-wrapper{
+    flex:1;
+}
+section.contact-us .contact-info-wrapper h1{
+    margin-top: 4rem;
+}
+section.contact-us .map{
+    flex:1;
+    
+}
+section.contact-us {
+    padding: 0;
+    padding-bottom: 0;
+}
+section.contact-us .contact-info{
+    display: flex;
+    justify-content: center;
+}
+
+footer .container{
+    display: flex;
+    color: var(--pure);
+}
+footer{
+    background-color: var(--footer);
+    padding: 4rem 0;
+}
+footer .box{
+    flex: 1;
+    margin-right: 2rem;
+    text-align: center;
+}
+footer .instagram-api img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+footer .instagram-api .post-wrapper{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+
+}
+footer .instagram-api .post-wrapper > div{
+    width: calc(1/3*100%-(1-1/3)*10px);
+    margin-bottom: 10px;
+}
+
+footer .box ul{
+    list-style-type: none;
+}
+footer .box ul li a{
+    color: var(--pure);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+footer .box ul li a:hover{
+    color: var(--primary);
+}
+footer .box h3{
+    border-bottom: 1px solid var(--primary);
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+}
+footer.copyright{
+    background: var(--secondary);
+    color: var(--pure);
+}
